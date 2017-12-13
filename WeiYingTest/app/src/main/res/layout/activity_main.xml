@@ -7,5 +7,8 @@
     android:orientation="vertical"
     tools:context="zhaoxixiang.bwie.com.weiyingtest.MainActivity">
 
-
+    <com.hjm.bottomtabbar.BottomTabBar
+        android:id="@+id/main_tabBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.hjm.bottomtabbar.BottomTabBar>
 </LinearLayout>
