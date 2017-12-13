@@ -1,5 +1,6 @@
 package zhaoxixiang.bwie.com.weiyingtest;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -13,9 +14,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
+
         initView();
 
+        mainTabBar.init(getSupportFragmentManager())
+                .setImgSize(50,50)
+                .setFontSize(8)
+                .setTabPadding(4,6,10)
+                .setChangeColor(Color.RED,Color.DKGRAY)
+                .addTabItem("精选",R.mipmap.found_select,R.mipmap.found,ShouYe.class)
+                .addTabItem("专题",R.mipmap.special_select,R.mipmap.special,ShouYe.class)
+                .addTabItem("发现",R.mipmap.fancy_select,R.mipmap.fancy,ShouYe.class)
+                .addTabItem("我的",R.mipmap.my_select,R.mipmap.my,ShouYe.class);
 
     }
 
