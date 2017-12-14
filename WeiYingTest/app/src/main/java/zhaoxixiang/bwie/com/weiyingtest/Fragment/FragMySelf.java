@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import zhaoxixiang.bwie.com.weiyingtest.R;
+
 /**
  * Created by admin on 2017/12/13/013.
  */
@@ -15,6 +17,9 @@ public class FragMySelf extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+        View view=inflater.inflate(R.layout.myself_frag,container,false);
+        //view.getBackground().mutate().setAlpha(0);
+
+        return view;
     }
 }
