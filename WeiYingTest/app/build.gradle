@@ -44,4 +44,6 @@ dependencies {
 
     //发现的依赖
     compile 'com.daprlabs.aaron:swipedeck:2.0.6'
+
+
 }
