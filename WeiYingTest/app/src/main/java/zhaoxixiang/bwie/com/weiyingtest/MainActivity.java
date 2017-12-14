@@ -30,10 +30,11 @@ public class MainActivity extends AppCompatActivity {
         initView();
 
         mainTabBar.init(getSupportFragmentManager())
-                .setImgSize(50,50)
-                .setFontSize(8)
-                .setTabPadding(4,6,10)
+                .setImgSize(60,60)
+                .setFontSize(10)
+                .setTabPadding(10,10,10)
                 .setChangeColor(Color.RED,Color.DKGRAY)
+                .setTabBarBackgroundResource(R.mipmap.bottom_bg)
                 .addTabItem("精选",R.mipmap.found_select,R.mipmap.found,ShouYeFragment.class)
                 .addTabItem("专题",R.mipmap.special_select,R.mipmap.special,ZhuanFragment.class)
                 .addTabItem("发现",R.mipmap.fancy_select,R.mipmap.fancy,Discovery.class)
