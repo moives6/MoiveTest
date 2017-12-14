@@ -43,7 +43,7 @@ dependencies {
     compile 'com.hjm:BottomTabBar:1.1.1'
 
     //发现的依赖
-    compile 'com.daprlabs.aaron:swipedeck:2.0.6'
+    compile 'com.github.mcxtzhang:ZLayoutManager:V1.1.0'
 
     compile 'me.yokeyword:fragmentation:0.7.10'
     compile 'com.orhanobut:logger:1.15'
