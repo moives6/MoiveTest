@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:swipedeck="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+    <com.daprlabs.aaron.swipedeck.SwipeDeck
+        android:background="#dff"
+        android:id="@+id/swipe_deck"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:padding="50dp"
+        swipedeck:max_visible="3"
+        swipedeck:swipe_enabled="true"
+        />
+
+
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/bt_dis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

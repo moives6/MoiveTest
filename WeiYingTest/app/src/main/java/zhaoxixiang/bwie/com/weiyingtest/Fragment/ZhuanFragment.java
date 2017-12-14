@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.daprlabs.aaron.swipedeck.SwipeDeck;
+
 import zhaoxixiang.bwie.com.weiyingtest.R;
 
 /**
@@ -14,6 +16,8 @@ import zhaoxixiang.bwie.com.weiyingtest.R;
  */
 
 public class ZhuanFragment extends Fragment{
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
