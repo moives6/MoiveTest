@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.hjm.bottomtabbar.BottomTabBar;
 
+import zhaoxixiang.bwie.com.weiyingtest.Fragment.Discovery;
 import zhaoxixiang.bwie.com.weiyingtest.Fragment.FragMySelf;
 import zhaoxixiang.bwie.com.weiyingtest.Fragment.ShouYeFragment;
 import zhaoxixiang.bwie.com.weiyingtest.Fragment.ZhuanFragment;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 .setChangeColor(Color.RED,Color.DKGRAY)
                 .addTabItem("精选",R.mipmap.found_select,R.mipmap.found,ShouYeFragment.class)
                 .addTabItem("专题",R.mipmap.special_select,R.mipmap.special,ZhuanFragment.class)
-                .addTabItem("发现",R.mipmap.fancy_select,R.mipmap.fancy,ShouYe.class)
+                .addTabItem("发现",R.mipmap.fancy_select,R.mipmap.fancy,Discovery.class)
                 .addTabItem("我的",R.mipmap.my_select,R.mipmap.my,FragMySelf.class);
 
     }
