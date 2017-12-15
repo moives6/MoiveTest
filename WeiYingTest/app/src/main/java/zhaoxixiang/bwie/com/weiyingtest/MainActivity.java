@@ -1,5 +1,6 @@
 package zhaoxixiang.bwie.com.weiyingtest;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import zhaoxixiang.bwie.com.weiyingtest.Fragment.Discovery;
 import zhaoxixiang.bwie.com.weiyingtest.Fragment.FragMySelf;
 import zhaoxixiang.bwie.com.weiyingtest.Fragment.ShouYeFragment;
 import zhaoxixiang.bwie.com.weiyingtest.Fragment.ZhuanFragment;
+import zhaoxixiang.bwie.com.weiyingtest.activity.SetActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,6 +56,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this,"敬请期待",Toast.LENGTH_LONG).show();
+            }
+        });
+        celaShoucang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,MyCollect.class);
+                startActivity(intent);
+            }
+        });
+        celaShezhi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this, SetActivity.class);
+                startActivity(intent);
             }
         });
     }

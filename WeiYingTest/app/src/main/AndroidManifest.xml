@@ -35,7 +35,8 @@
 
         <activity android:name=".XiangQActivity" />
         <activity android:name=".ShiPinActivity"></activity>
-
+        <activity android:name=".activity.SetActivity"/>
+        <activity android:name=".MyCollect"/>
     </application>
 
 </manifest>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_colorful"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#FF2954D7">
+
+        <ImageView
+            android:id="@+id/set_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
+            android:gravity="center_horizontal"
+            android:text="设置"
+            android:textColor="#fff"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/set_tuijian"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#1ff00000">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推荐给好友"
+            android:textSize="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_centerVertical="true"
+            android:textColor="#fff"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="2dp"
+        android:id="@+id/set_huancun"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#1ff00000">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清理缓存"
+            android:textSize="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_centerVertical="true"
+            android:textColor="#fff"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/set_guanyu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:background="#1ff00000">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关于我们"
+            android:textSize="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_centerVertical="true"
+            android:textColor="#fff"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/set_jianyi"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
+        android:background="#1ff00000">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="建议反馈"
+            android:textSize="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_centerVertical="true"
+            android:textColor="#fff"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+</LinearLayout>

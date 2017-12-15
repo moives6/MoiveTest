@@ -13,8 +13,10 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import zhaoxixiang.bwie.com.weiyingtest.MyCollect;
 import zhaoxixiang.bwie.com.weiyingtest.R;
 import zhaoxixiang.bwie.com.weiyingtest.activity.LiShiActivity;
+import zhaoxixiang.bwie.com.weiyingtest.activity.SetActivity;
 
 /**
  * Created by admin on 2017/12/13/013.
@@ -45,7 +47,8 @@ public class FragMySelf extends Fragment {
         myselfSet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent =new Intent(getActivity(), SetActivity.class);
+                startActivity(intent);
             }
         });
         myselfHauncun.setOnClickListener(new View.OnClickListener() {
@@ -64,7 +67,8 @@ public class FragMySelf extends Fragment {
         myselfShoucang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent=new Intent(getActivity(), MyCollect.class);
+                startActivity(intent);
             }
         });
         myselfZhuti.setOnClickListener(new View.OnClickListener() {
