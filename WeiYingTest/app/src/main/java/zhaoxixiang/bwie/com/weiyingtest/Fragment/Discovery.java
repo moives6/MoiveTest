@@ -73,6 +73,7 @@ public class Discovery extends Fragment implements ShowDiscoveryView {
         adapter.setOnItemClickListener(new Myadapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
+                
                 Toast.makeText(getActivity(), list.get(position).getDataId().toString(),Toast.LENGTH_SHORT).show();
 
             }

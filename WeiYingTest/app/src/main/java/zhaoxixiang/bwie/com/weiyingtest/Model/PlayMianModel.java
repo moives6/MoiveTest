@@ -4,30 +4,30 @@ import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
-import zhaoxixiang.bwie.com.weiyingtest.Bean.ShouYeBean;
-import zhaoxixiang.bwie.com.weiyingtest.Prestener.ZtPresenter;
+import zhaoxixiang.bwie.com.weiyingtest.Bean.XiangQingBean;
+import zhaoxixiang.bwie.com.weiyingtest.Prestener.PlayPresenter;
 import zhaoxixiang.bwie.com.weiyingtest.Util.API;
 import zhaoxixiang.bwie.com.weiyingtest.Util.ApiService;
 import zhaoxixiang.bwie.com.weiyingtest.Util.RetrofitUtils;
 
 /**
- * Created by FLOWER on 2017/12/14.
+ * Created by FLOWER on 2017/12/15.
  */
 
-public class ZtMainModel implements ZtModel{
-    ZtPresenter ztPresenter;
+public class PlayMianModel implements PlayModel{
+    PlayPresenter playPresenter;
 
-    public ZtMainModel(ZtPresenter ztPresenter) {
-        this.ztPresenter = ztPresenter;
+    public PlayMianModel(PlayPresenter playPresenter) {
+        this.playPresenter = playPresenter;
     }
 
     @Override
-    public void setData() {
+    public void setData(String dataId) {
         ApiService apiService = RetrofitUtils.getInstance().getApiService(API.url,ApiService.class);
-        Observable<ShouYeBean> data = apiService.getShouYe();
-        data.subscribeOn(Schedulers.io())
+        Observable<XiangQingBean> xiangQing = apiService.getXiangQing(dataId);
+        xiangQing.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<ShouYeBean>() {
+                .subscribe(new Subscriber<XiangQingBean>() {
                     @Override
                     public void onCompleted() {
 
@@ -39,9 +39,8 @@ public class ZtMainModel implements ZtModel{
                     }
 
                     @Override
-                    public void onNext(ShouYeBean shouYeBean) {
-                        ztPresenter.getData(shouYeBean);
-                        //Log.i("xxx",shouYeBean.getRet().getList().toString());
+                    public void onNext(XiangQingBean xiangQingBean) {
+                        playPresenter.getData(xiangQingBean);
                     }
                 });
     }
