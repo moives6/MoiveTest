@@ -7,7 +7,12 @@
     android:orientation="vertical"
     tools:context="zhaoxixiang.bwie.com.weiyingtest.MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff00">
 
+    </LinearLayout>
     <com.hjm.bottomtabbar.BottomTabBar
         android:id="@+id/main_tabBar"
         android:background="@mipmap/bg_colorful"
