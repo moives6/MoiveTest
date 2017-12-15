@@ -1,7 +1,5 @@
 package zhaoxixiang.bwie.com.weiyingtest.Model;
 
-import android.util.Log;
-
 import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
@@ -43,7 +41,7 @@ public class ZtMainModel implements ZtModel{
                     @Override
                     public void onNext(ShouYeBean shouYeBean) {
                         ztPresenter.getData(shouYeBean);
-                        Log.i("xxx",shouYeBean.getRet().getList().toString());
+                        //Log.i("xxx",shouYeBean.getRet().getList().toString());
                     }
                 });
     }

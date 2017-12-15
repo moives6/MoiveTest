@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".XiangQActivity"></activity>
+        <activity android:name=".activity.PlayerActivity"></activity>
     </application>
 
 </manifest>
