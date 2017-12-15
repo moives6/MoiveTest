@@ -1,4 +1,4 @@
-package zhaoxixiang.bwie.com.weiyingtest.adapter;
+package zhaoxixiang.bwie.com.weiyingtest.Adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

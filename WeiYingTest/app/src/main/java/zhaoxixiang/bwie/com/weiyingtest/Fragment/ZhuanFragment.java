@@ -12,19 +12,29 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
+
+
+
 import java.util.List;
 
+import zhaoxixiang.bwie.com.weiyingtest.Adapter.ZtAdapter;
 import zhaoxixiang.bwie.com.weiyingtest.Bean.ShouYeBean;
 import zhaoxixiang.bwie.com.weiyingtest.Prestener.ZtMainPresenter;
 import zhaoxixiang.bwie.com.weiyingtest.Prestener.ZtPresenter;
+
 import zhaoxixiang.bwie.com.weiyingtest.R;
 import zhaoxixiang.bwie.com.weiyingtest.View.ZtView;
+
+
+
 import zhaoxixiang.bwie.com.weiyingtest.XiangQActivity;
-import zhaoxixiang.bwie.com.weiyingtest.adapter.ZtAdapter;
+
 
 /**
  * Created by FLOWER on 2017/12/14.
  */
+
 
 public class ZhuanFragment extends Fragment implements ZtView{
     private RecyclerView rlv;
@@ -66,4 +76,5 @@ public class ZhuanFragment extends Fragment implements ZtView{
             }
         });
     }
+
 }
