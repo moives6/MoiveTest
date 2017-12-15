@@ -29,6 +29,9 @@ public class XiangQActivity extends AppCompatActivity implements XqView{
     XqPresenter xqPresenter;
     private List<ShouYeBean.RetBean.ListBean.ChildListBean> childList;
     private SharedPreferences.Editor editor;
+    private String dataId;
+    private String description;
+    private List<FenLeiBean.RetBean.ListBean> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,17 +60,20 @@ public class XiangQActivity extends AppCompatActivity implements XqView{
 
     @Override
     public void getData(FenLeiBean fenLeiBean) {
-        List<FenLeiBean.RetBean.ListBean> list = fenLeiBean.getRet().getList();
-        for (int i = 0;i<list.size();i++){
-            String dataId = list.get(i).getDataId();
-            editor.putString("dataId",dataId);
-        }
-        XqAdapter xqAdapter = new XqAdapter(this,list);
+        list = fenLeiBean.getRet().getList();
+
+        XqAdapter xqAdapter = new XqAdapter(this, list);
         xq_rlv.setAdapter(xqAdapter);
         xqAdapter.setOnXqItemListener(new XqAdapter.OnXqItemListener() {
             @Override
             public void OnXqItemClick(int position) {
                 Intent intent = new Intent(XiangQActivity.this, PlayerActivity.class);
+                dataId = list.get(position).getDataId();
+                description = list.get(position).getDescription();
+                editor.putString("dataId", dataId);
+
+                intent.putExtra("dataId",dataId);
+                intent.putExtra("description",description);
                 startActivity(intent);
             }
         });

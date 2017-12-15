@@ -55,4 +55,5 @@ dependencies {
 
     compile 'com.github.leifzhang:IjkLib:0.4.3'
 
+    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
 }
