@@ -24,10 +24,10 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
+    //发现的依赖
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
-
     compile 'com.squareup.okhttp3:okhttp:3.9.0'
     compile 'com.squareup.okhttp3:logging-interceptor:3.9.0'
     compile 'com.squareup.retrofit2:retrofit:2.0.1'
@@ -35,12 +35,14 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.1'
     compile 'io.reactivex:rxandroid:1.1.0'
     compile 'com.youth.banner:banner:1.4.8'
-
     compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
     compile 'com.facebook.fresco:fresco:1.5.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
-
     compile 'com.hjm:BottomTabBar:1.1.1'
+
+    compile 'com.daprlabs.aaron:swipedeck:2.0.6'
+    testCompile 'junit:junit:4.12'
+
 
     //发现的依赖
     compile 'com.github.mcxtzhang:ZLayoutManager:V1.1.0'
@@ -49,5 +51,9 @@ dependencies {
     compile 'com.orhanobut:logger:1.15'
     compile 'com.jakewharton:butterknife:8.5.1'
 
+    compile 'com.github.bumptech.glide:glide:3.7.0'
 
+    compile 'com.github.leifzhang:IjkLib:0.4.3'
+
+    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
 }
