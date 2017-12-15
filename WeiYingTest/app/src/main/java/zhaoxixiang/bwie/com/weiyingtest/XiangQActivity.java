@@ -16,7 +16,7 @@ import zhaoxixiang.bwie.com.weiyingtest.Bean.ShouYeBean;
 import zhaoxixiang.bwie.com.weiyingtest.Prestener.XqMainPresenter;
 import zhaoxixiang.bwie.com.weiyingtest.Prestener.XqPresenter;
 import zhaoxixiang.bwie.com.weiyingtest.View.XqView;
-import zhaoxixiang.bwie.com.weiyingtest.adapter.XqAdapter;
+import zhaoxixiang.bwie.com.weiyingtest.Adapter.XqAdapter;
 
 public class XiangQActivity extends AppCompatActivity implements XqView{
 

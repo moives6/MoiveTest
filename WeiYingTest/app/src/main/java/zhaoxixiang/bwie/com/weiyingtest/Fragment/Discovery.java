@@ -20,10 +20,7 @@ import com.mcxtzhang.layoutmanager.swipecard.RenRenCallback;
 import java.util.List;
 
 import zhaoxixiang.bwie.com.weiyingtest.Adapter.Myadapter;
-import zhaoxixiang.bwie.com.weiyingtest.Adapter.SwipeDeckAdapter;
 import zhaoxixiang.bwie.com.weiyingtest.Bean.FenLeiBean;
-import zhaoxixiang.bwie.com.weiyingtest.Bean.SearchBean;
-import zhaoxixiang.bwie.com.weiyingtest.MainActivity;
 import zhaoxixiang.bwie.com.weiyingtest.Prestener.DiscoveryPresenter.DiscoveryPresenterSe;
 import zhaoxixiang.bwie.com.weiyingtest.R;
 import zhaoxixiang.bwie.com.weiyingtest.View.DiscoveryView.ShowDiscoveryView;
