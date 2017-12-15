@@ -26,10 +26,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".XiangQActivity"></activity>
         <activity android:name=".activity.PlayerActivity"></activity>
 
         <activity android:name=".activity.LiShiActivity"></activity>
+
+
+        <activity android:name=".XiangQActivity" />
+        <activity android:name=".ShiPinActivity"></activity>
 
     </application>
 
