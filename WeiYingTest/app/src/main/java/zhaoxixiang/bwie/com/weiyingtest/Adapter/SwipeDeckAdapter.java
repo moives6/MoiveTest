@@ -21,6 +21,8 @@ import zhaoxixiang.bwie.com.weiyingtest.R;
 public class SwipeDeckAdapter extends BaseAdapter {
     List<FenLeiBean.RetBean.ListBean> list;
     Context context;
+
+
     public SwipeDeckAdapter(Context context, List<FenLeiBean.RetBean.ListBean> list) {
         this.context=context;
         this.list=list;
@@ -60,6 +62,8 @@ public class SwipeDeckAdapter extends BaseAdapter {
         holder.draweeView.setImageURI(list.get(i).getPic().toString());
         return view;
     }
+
+
 
     class ViewHoleder{
         SimpleDraweeView draweeView ;

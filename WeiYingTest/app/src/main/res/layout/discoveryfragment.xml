@@ -5,22 +5,26 @@
     xmlns:swipedeck="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     >
-
-    <com.daprlabs.aaron.swipedeck.SwipeDeck
-        android:background="#dff"
-        android:id="@+id/swipe_deck"
-        android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:padding="50dp"
-        swipedeck:max_visible="3"
-        swipedeck:swipe_enabled="true"
-        />
+   <android.support.v7.widget.RecyclerView
+        android:layout_weight="9"
+       android:id="@+id/rc"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
 
 
+   </android.support.v7.widget.RecyclerView>
     <Button
+        android:layout_marginBottom="20dp"
+       android:layout_weight="1"
+        android:textSize="15dp"
+        android:textColor="#fff"
+        android:background="@drawable/shape_bt"
+        android:text="换一批"
         android:layout_gravity="center_horizontal"
         android:id="@+id/bt_dis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="80dp"
+        android:layout_height="40dp" />
+
+
 
 </LinearLayout>
