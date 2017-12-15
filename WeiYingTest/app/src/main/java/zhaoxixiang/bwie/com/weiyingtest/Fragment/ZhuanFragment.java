@@ -25,49 +25,17 @@ import zhaoxixiang.bwie.com.weiyingtest.Prestener.ZtPresenter;
 
 import zhaoxixiang.bwie.com.weiyingtest.R;
 import zhaoxixiang.bwie.com.weiyingtest.View.ZtView;
-<<<<<<< HEAD
 
-=======
+
+
 import zhaoxixiang.bwie.com.weiyingtest.XiangQActivity;
-import zhaoxixiang.bwie.com.weiyingtest.adapter.ZtAdapter;
->>>>>>> 5997a8d4bdefe7676dc9c1f2fa62dd8514185c7d
+
 
 /**
  * Created by FLOWER on 2017/12/14.
  */
 
-<<<<<<< HEAD
 
-public class ZhuanFragment extends Fragment implements ZtView {
-
-
-
-        private RecyclerView rlv;
-        ZtPresenter ztPresenter;
-
-
-        @Nullable
-        @Override
-        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-            View view = inflater.inflate(R.layout.zhuanti_fragment, container, false);
-
-            ztPresenter = new ZtMainPresenter(this);
-            ztPresenter.setData();
-
-            rlv = (RecyclerView) view.findViewById(R.id.rlv);
-            rlv.setLayoutManager(new GridLayoutManager(getContext(), 2));
-            return view;
-        }
-
-        @Override
-        public void getData(ShouYeBean shouYeBean) {
-            List<ShouYeBean.RetBean.ListBean> list = shouYeBean.getRet().getList();
-            //Log.i("xxx",ret.getList().toString());
-            ZtAdapter ztAdapter = new ZtAdapter(getActivity(), list);
-            rlv.setAdapter(ztAdapter);
-        }
-
-=======
 public class ZhuanFragment extends Fragment implements ZtView{
     private RecyclerView rlv;
     ZtPresenter ztPresenter;
@@ -108,5 +76,5 @@ public class ZhuanFragment extends Fragment implements ZtView{
             }
         });
     }
->>>>>>> 5997a8d4bdefe7676dc9c1f2fa62dd8514185c7d
+
 }
