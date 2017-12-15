@@ -17,14 +17,14 @@ import com.youth.banner.Banner;
 import java.util.ArrayList;
 import java.util.List;
 
+import zhaoxixiang.bwie.com.weiyingtest.Adapter.RecycAdapter;
 import zhaoxixiang.bwie.com.weiyingtest.Bean.ShouYeBean;
 import zhaoxixiang.bwie.com.weiyingtest.Myimageloader;
 import zhaoxixiang.bwie.com.weiyingtest.Prestener.PreInter;
 import zhaoxixiang.bwie.com.weiyingtest.Prestener.PreSx;
 import zhaoxixiang.bwie.com.weiyingtest.R;
-import zhaoxixiang.bwie.com.weiyingtest.ShiPinActivity;
 import zhaoxixiang.bwie.com.weiyingtest.View.ViewInter;
-import zhaoxixiang.bwie.com.weiyingtest.Adapter.RecycAdapter;
+import zhaoxixiang.bwie.com.weiyingtest.activity.PlayerActivity;
 
 /**
  * Created by 王爱诗 on 2017/12/14.
@@ -78,7 +78,7 @@ public class ShouYeFragment extends Fragment implements ViewInter{
     }
 
     @Override
-    public void getBean(ShouYeBean shouYeBean) {
+    public void getBean(final ShouYeBean shouYeBean) {
         list1 = shouYeBean.getRet().getList();
         recyc.setLayoutManager(new LinearLayoutManager(getActivity()));
         RecycAdapter adapter=new RecycAdapter(getActivity(), list1);
@@ -89,8 +89,9 @@ public class ShouYeFragment extends Fragment implements ViewInter{
         adapter.setOnItemClickListener(new RecycAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-               //startActivity(new Intent(getActivity(),Main2Activity.class));
-                Intent intent=new Intent(getActivity(), ShiPinActivity.class);
+
+                Intent intent=new Intent(getActivity(), PlayerActivity.class);
+                intent.putExtra("dataId",shouYeBean.getRet().getList().get(0).getChildList().get(position).getDataId());
                 startActivity(intent);
             }
         });
