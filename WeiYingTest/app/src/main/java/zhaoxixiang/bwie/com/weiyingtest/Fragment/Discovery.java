@@ -1,5 +1,6 @@
 package zhaoxixiang.bwie.com.weiyingtest.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -24,6 +25,8 @@ import zhaoxixiang.bwie.com.weiyingtest.Bean.FenLeiBean;
 import zhaoxixiang.bwie.com.weiyingtest.Prestener.DiscoveryPresenter.DiscoveryPresenterSe;
 import zhaoxixiang.bwie.com.weiyingtest.R;
 import zhaoxixiang.bwie.com.weiyingtest.View.DiscoveryView.ShowDiscoveryView;
+import zhaoxixiang.bwie.com.weiyingtest.XiangQActivity;
+import zhaoxixiang.bwie.com.weiyingtest.activity.PlayerActivity;
 
 /**
  * Created by 胡靖宇 on 2017/12/14.
@@ -73,9 +76,9 @@ public class Discovery extends Fragment implements ShowDiscoveryView {
         adapter.setOnItemClickListener(new Myadapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                
-                Toast.makeText(getActivity(), list.get(position).getDataId().toString(),Toast.LENGTH_SHORT).show();
-
+                Intent inte=new Intent(getActivity(), PlayerActivity.class);
+                inte.putExtra("dataId",list.get(position).getDataId());
+                startActivity(inte);
             }
         });
     }

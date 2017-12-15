@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -16,7 +18,10 @@ import com.astuetz.PagerSlidingTabStrip;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 import tv.danmaku.ijk.media.widget.media.AndroidMediaController;
 import tv.danmaku.ijk.media.widget.media.IjkVideoView;
+import zhaoxixiang.bwie.com.weiyingtest.Adapter.pageData;
 import zhaoxixiang.bwie.com.weiyingtest.Bean.XiangQingBean;
+import zhaoxixiang.bwie.com.weiyingtest.Fragment.Introduce_play;
+import zhaoxixiang.bwie.com.weiyingtest.Fragment.comment_play;
 import zhaoxixiang.bwie.com.weiyingtest.Prestener.PlayMainPresenter;
 import zhaoxixiang.bwie.com.weiyingtest.Prestener.PlayPresenter;
 import zhaoxixiang.bwie.com.weiyingtest.R;
@@ -39,6 +44,7 @@ public class PlayerActivity extends AppCompatActivity implements PlayView{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player);
 
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         //透明导航栏
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
@@ -48,6 +54,13 @@ public class PlayerActivity extends AppCompatActivity implements PlayView{
         String description = intent.getStringExtra("description");
         playPresenter = new PlayMainPresenter(this);
         playPresenter.setData(dataId);
+        //page
+        //向ViewPager绑定PagerSlidingTabStrip
+
+
+        play_vp.setAdapter(new pageData(getSupportFragmentManager()));
+
+        tabs.setViewPager(play_vp);
 
     }
     private void initView(){
