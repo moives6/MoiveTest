@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -45,7 +46,7 @@ public class ZtAdapter extends RecyclerView.Adapter<ZtAdapter.MyViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(MyViewHolder holder, final int position) {
         holder.zhuanti_title.setText(list.get(position).getTitle());
         List<ShouYeBean.RetBean.ListBean.ChildListBean> childList = list.get(0).getChildList();
         Picasso.with(context).load(childList.get(position).getPic()).into(holder.zhuanti_iv);
@@ -60,7 +61,15 @@ public class ZtAdapter extends RecyclerView.Adapter<ZtAdapter.MyViewHolder>{
                 holder.zhuanti_iv.setImageResource(R.mipmap.ic_launcher);
             }
         }*/
-    }
+      holder.itemView.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+              if (onItemListener!=null){
+                  onItemListener.OnItemClick(position);
+              }
+          }
+      });
+}
 
     @Override
     public int getItemCount() {
@@ -70,11 +79,13 @@ public class ZtAdapter extends RecyclerView.Adapter<ZtAdapter.MyViewHolder>{
     class MyViewHolder extends RecyclerView.ViewHolder {
         private final TextView zhuanti_title;
         private final ImageView zhuanti_iv;
+        private final RelativeLayout rl;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             zhuanti_title = (TextView)itemView.findViewById(R.id.zhuanti_title);
             zhuanti_iv = (ImageView)itemView.findViewById(R.id.zhuanti_iv);
+            rl = (RelativeLayout)itemView.findViewById(R.id.rl);
         }
     }
 }

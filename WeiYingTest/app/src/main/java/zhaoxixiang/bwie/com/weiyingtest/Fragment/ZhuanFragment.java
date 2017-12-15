@@ -1,5 +1,8 @@
 package zhaoxixiang.bwie.com.weiyingtest.Fragment;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -16,6 +19,7 @@ import zhaoxixiang.bwie.com.weiyingtest.Prestener.ZtMainPresenter;
 import zhaoxixiang.bwie.com.weiyingtest.Prestener.ZtPresenter;
 import zhaoxixiang.bwie.com.weiyingtest.R;
 import zhaoxixiang.bwie.com.weiyingtest.View.ZtView;
+import zhaoxixiang.bwie.com.weiyingtest.XiangQActivity;
 import zhaoxixiang.bwie.com.weiyingtest.adapter.ZtAdapter;
 
 /**
@@ -25,11 +29,16 @@ import zhaoxixiang.bwie.com.weiyingtest.adapter.ZtAdapter;
 public class ZhuanFragment extends Fragment implements ZtView{
     private RecyclerView rlv;
     ZtPresenter ztPresenter;
+    private SharedPreferences user;
+    private SharedPreferences.Editor editor;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.zhuanti_fragment, container, false);
+
+        user = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
+        editor = user.edit();
 
         ztPresenter = new ZtMainPresenter(this);
         ztPresenter.setData();
@@ -41,9 +50,20 @@ public class ZhuanFragment extends Fragment implements ZtView{
 
     @Override
     public void getData(ShouYeBean shouYeBean) {
-        List<ShouYeBean.RetBean.ListBean> list = shouYeBean.getRet().getList();
+        final List<ShouYeBean.RetBean.ListBean> list = shouYeBean.getRet().getList();
+
         //Log.i("xxx",ret.getList().toString());
         ZtAdapter ztAdapter = new ZtAdapter(getActivity(),list);
         rlv.setAdapter(ztAdapter);
+
+        ztAdapter.setOnItemListener(new ZtAdapter.OnItemListener() {
+            @Override
+            public void OnItemClick(int position) {
+                String title = list.get(position).getTitle();
+                Intent intent = new Intent(getActivity(), XiangQActivity.class);
+                startActivity(intent);
+                intent.putExtra("title",title);
+            }
+        });
     }
 }

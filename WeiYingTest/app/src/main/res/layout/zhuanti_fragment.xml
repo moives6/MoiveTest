@@ -4,6 +4,7 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
+        android:background="#000"
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <TextView
@@ -11,6 +12,7 @@
             android:layout_height="wrap_content"
             android:text="专题"
             android:textSize="20sp"
+            android:textColor="#fff"
             android:layout_centerInParent="true"/>
     </RelativeLayout>
     <android.support.v7.widget.RecyclerView
