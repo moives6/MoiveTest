@@ -1,5 +1,6 @@
 package zhaoxixiang.bwie.com.weiyingtest.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,6 +14,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import zhaoxixiang.bwie.com.weiyingtest.R;
+import zhaoxixiang.bwie.com.weiyingtest.activity.LiShiActivity;
 
 /**
  * Created by admin on 2017/12/13/013.
@@ -55,7 +57,8 @@ public class FragMySelf extends Fragment {
         myselfLishi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent=new Intent(getActivity(), LiShiActivity.class);
+                startActivity(intent);
             }
         });
         myselfShoucang.setOnClickListener(new View.OnClickListener() {
