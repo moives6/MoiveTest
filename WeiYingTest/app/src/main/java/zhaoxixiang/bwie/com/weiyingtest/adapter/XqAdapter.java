@@ -47,7 +47,7 @@ public class XqAdapter extends RecyclerView.Adapter<XqAdapter.MyViewHolder>{
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
-        holder.xq_tv.setText(list.get(position).getDescription());
+        holder.xq_tv.setText(list.get(position).getTitle());
         Picasso.with(context).load(list.get(position).getPic()).into(holder.xq_img);
 
         holder.rl.setOnClickListener(new View.OnClickListener() {
