@@ -15,6 +15,7 @@ import zhaoxixiang.bwie.com.weiyingtest.Fragment.Discovery;
 import zhaoxixiang.bwie.com.weiyingtest.Fragment.FragMySelf;
 import zhaoxixiang.bwie.com.weiyingtest.Fragment.ShouYeFragment;
 import zhaoxixiang.bwie.com.weiyingtest.Fragment.ZhuanFragment;
+import zhaoxixiang.bwie.com.weiyingtest.activity.FuliActivity;
 import zhaoxixiang.bwie.com.weiyingtest.activity.SetActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -72,6 +73,20 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        celaFuli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this, FuliActivity.class);
+                startActivity(intent);
+            }
+        });
+        celaGuanyu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
     }
 
     private void initView() {

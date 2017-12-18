@@ -6,4 +6,5 @@ package zhaoxixiang.bwie.com.weiyingtest.Util;
 
 public interface API {
     public static final String url ="http://api.svipmovie.com/front/";
+    public static final String HOST = "http://gank.io/api/";
 }

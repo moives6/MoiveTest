@@ -1,11 +1,16 @@
 package zhaoxixiang.bwie.com.weiyingtest.Util;
 
+import java.util.List;
+
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import rx.Observable;
+import zhaoxixiang.bwie.com.weiyingtest.Bean.FavBean;
 import zhaoxixiang.bwie.com.weiyingtest.Bean.FenLeiBean;
+import zhaoxixiang.bwie.com.weiyingtest.Bean.GankItemBean;
 import zhaoxixiang.bwie.com.weiyingtest.Bean.PingLunBean;
 import zhaoxixiang.bwie.com.weiyingtest.Bean.SearchBean;
 import zhaoxixiang.bwie.com.weiyingtest.Bean.ShouYeBean;
@@ -37,4 +42,11 @@ public interface ApiService {
     @FormUrlEncoded
     @POST("Commentary/getCommentList.do")
     Observable<PingLunBean> getPinglun(@Field("mediaId")String mediaId, @Field("pnum")int page);
+
+    /**
+     * 福利列表
+     */
+    @GET("data/福利/{num}/{page}")
+    Observable<FavBean> getGirlList(@Path("num") int num, @Path("page") int page);
+
 }

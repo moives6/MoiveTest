@@ -13,7 +13,7 @@ import android.widget.ImageView;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-    private ImageView welcomeIv;
+
     private Handler handler=new Handler();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,6 +33,6 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        welcomeIv = (ImageView) findViewById(R.id.welcome_iv);
+
     }
 }

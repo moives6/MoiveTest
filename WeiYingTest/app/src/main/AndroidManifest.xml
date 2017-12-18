@@ -37,6 +37,7 @@
         <activity android:name=".ShiPinActivity"></activity>
         <activity android:name=".activity.SetActivity"/>
         <activity android:name=".MyCollect"/>
+        <activity android:name=".activity.FuliActivity"/>
     </application>
 
 </manifest>
