@@ -4,6 +4,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical"
+        android:fadingEdge="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
     <TextView
         android:layout_marginTop="5dp"
         android:id="@+id/daoyan"
@@ -24,13 +36,12 @@
 
     <TextView
         android:id="@+id/gd"
-        android:layout_marginLeft="340dp"
+        android:layout_marginLeft="300dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:textSize="15sp"
         android:textColor="#3c3c3e"
-
         android:text="↓更多" />
 
     <android.support.v7.widget.RecyclerView
@@ -38,5 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </android.support.v7.widget.RecyclerView>
+</LinearLayout>
 
+</ScrollView>
 </LinearLayout>
