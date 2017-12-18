@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,11 +13,17 @@ import android.widget.TextView;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 
+import java.util.List;
+
+import zhaoxixiang.bwie.com.weiyingtest.Adapter.ZtAdapter;
+import zhaoxixiang.bwie.com.weiyingtest.Adapter.qxAdapter;
 import zhaoxixiang.bwie.com.weiyingtest.Bean.XiangQingBean;
 import zhaoxixiang.bwie.com.weiyingtest.Prestener.PlayMainPresenter;
 import zhaoxixiang.bwie.com.weiyingtest.Prestener.PlayPresenter;
 import zhaoxixiang.bwie.com.weiyingtest.R;
 import zhaoxixiang.bwie.com.weiyingtest.View.PlayView;
+import zhaoxixiang.bwie.com.weiyingtest.XiangQActivity;
+import zhaoxixiang.bwie.com.weiyingtest.activity.PlayerActivity;
 
 /**
 
@@ -34,6 +42,7 @@ public class Introduce_play extends Fragment implements PlayView {
 
     PlayPresenter playPresenter;
     TextView dy,zy,jj,gd;
+    RecyclerView rc;
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Fresco.initialize(getActivity());
         View view = View.inflate(getContext(), R.layout.introduceplay, null);
@@ -45,6 +54,8 @@ public class Introduce_play extends Fragment implements PlayView {
         zy=view.findViewById(R.id.zhuyan);
         jj=view.findViewById(R.id.jianjie);
         gd=view.findViewById(R.id.gd);
+        rc=view.findViewById(R.id.intr_rc);
+        rc.setLayoutManager(new GridLayoutManager(getActivity(),3));
         gd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,5 +82,19 @@ public class Introduce_play extends Fragment implements PlayView {
         dy.setText("导演:"+xiangQingBean.getRet().getDirector());
         zy.setText("主演:"+xiangQingBean.getRet().getActors());
         jj.setText("简介:"+xiangQingBean.getRet().getDescription());
+
+       final List<XiangQingBean.RetBean.ListBean> list= xiangQingBean.getRet().getList();
+        qxAdapter ztAdapter = new qxAdapter(getActivity(),list);
+        rc.setAdapter(ztAdapter);
+
+        ztAdapter.setOnItemListener(new qxAdapter.OnItemListener() {
+            @Override
+            public void OnItemClick(int position) {
+               Intent inte=new Intent(getActivity(),PlayerActivity.class);
+                inte.putExtra("dataId",list.get(0).getChildList().get(position).getDataId());
+                startActivity(inte);
+
+            }
+        });
     }
 }

@@ -11,7 +11,7 @@
         />
     <TextView
         android:layout_gravity="center"
-        android:textColor="#b9b9b9"
+        android:textColor="#353434"
         android:id="@+id/text_collect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
